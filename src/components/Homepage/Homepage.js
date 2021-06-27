@@ -90,7 +90,7 @@ const Content = styled.div`
     justify-content: space-between;
   }
   h1 {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
     font-size: 26px;
@@ -98,7 +98,7 @@ const Content = styled.div`
     color: #ffffff;
   }
   h3 {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -130,7 +130,7 @@ const AddTransaction = styled.div`
   justify-content: space-between;
 
   h3 {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
     font-size: 17px;

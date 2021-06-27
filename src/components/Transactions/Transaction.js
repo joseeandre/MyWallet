@@ -40,7 +40,7 @@ const Content = styled.div`
     justify-content: space-between;
   }
   h1 {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -48,7 +48,7 @@ const Content = styled.div`
     color: #000000;
   }
   .date {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -57,7 +57,7 @@ const Content = styled.div`
   }
   .description {
     margin-left: 12px;
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -65,7 +65,7 @@ const Content = styled.div`
     color: #000000;
   }
   .value {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

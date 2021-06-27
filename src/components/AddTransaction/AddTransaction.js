@@ -87,7 +87,7 @@ const Content = styled.div`
   color: white;
   padding: 5%;
   h1 {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
     font-size: 26px;

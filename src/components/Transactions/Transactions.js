@@ -62,7 +62,7 @@ const Content = styled.div`
     justify-content: space-between;
   }
   .saldo {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -74,7 +74,7 @@ const Content = styled.div`
     overflow-y: scroll;
   }
   .value {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -92,7 +92,7 @@ const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;

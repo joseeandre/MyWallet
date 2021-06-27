@@ -115,7 +115,7 @@ const Content = styled.div`
     font-size: 18px;
   }
   h3 {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
