@@ -1,15 +1,10 @@
 import styled from "styled-components";
-import { Link, useHistory, useParams } from "react-router-dom";
-import React, { useContext, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import React, { useState } from "react";
 import Loading from "../Loading/Loading";
 import axios from "axios";
-import { IconContext } from "react-icons";
-import { HiOutlineLogout } from "react-icons/hi";
-import { IoMdAddCircleOutline, IoMdRemoveCircleOutline } from "react-icons/io";
-import Transactions from "../Transactions/Transactions";
 
-export default function Homepage(props) {
-  const { user } = props;
+export default function Homepage() {
   const { id } = useParams();
   const history = useHistory();
   const [value, setValue] = useState("");
@@ -46,7 +41,7 @@ export default function Homepage(props) {
     const body = { type, value, description };
 
     const request = axios.post(
-      "http://localhost:4000/transactions",
+      "https://mywallet-back.herokuapp.com/transactions",
       body,
       config
     );

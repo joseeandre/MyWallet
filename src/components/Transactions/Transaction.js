@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
-import React, { useContext, useState, useEffect } from "react";
-import Loading from "../Loading/Loading";
-import axios from "axios";
+import { useHistory } from "react-router-dom";
+import React from "react";
 import dayjs from "dayjs";
 
 export default function Transaction(props) {
@@ -10,11 +8,6 @@ export default function Transaction(props) {
   const { type, description, value, date } = transaction;
   const history = useHistory();
   const token = localStorage.getItem("token");
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
 
   if (!token) {
     alert("Faca login!");
@@ -24,11 +17,11 @@ export default function Transaction(props) {
   return (
     <Content>
       <div className="space-between">
-        <div className="date">{dayjs(transaction.date).format("DD/MM")}</div>
-        <div className="description">{transaction.description}</div>
+        <div className="date">{dayjs(date).format("DD/MM")}</div>
+        <div className="description">{description}</div>
       </div>
-      <div className={transaction.type === "in" ? "value green": "value red"}>
-          {parseFloat(transaction.value).toFixed(2)}
+      <div className={type === "in" ? "value green": "value red"}>
+          {parseFloat(value).toFixed(2)}
       </div>
     </Content>
   );

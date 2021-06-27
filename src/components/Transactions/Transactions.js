@@ -1,21 +1,13 @@
 import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
-import React, { useContext, useState } from "react";
-import Loading from "../Loading/Loading";
+import { useHistory } from "react-router-dom";
+import React from "react";
 import Transaction from "./Transaction";
-import axios from "axios";
-import { identifier } from "@babel/types";
 
 export default function Transactions(props) {
   const { transactions } = props;
   const history = useHistory();
   const token = localStorage.getItem("token");
   let total = 0;
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
 
   if (!token) {
     alert("Faca login!");

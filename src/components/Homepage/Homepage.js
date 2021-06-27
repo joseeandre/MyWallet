@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link, useHistory } from "react-router-dom";
-import React, { useContext, useState, useEffect } from "react";
-import Loading from "../Loading/Loading";
+import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { IconContext } from "react-icons";
 import { HiOutlineLogout } from "react-icons/hi";
@@ -27,7 +26,7 @@ export default function Homepage() {
 
   useEffect(() => {
     setIsLoading(true);
-    const request = axios.get("http://localhost:4000/transactions", config);
+    const request = axios.get("https://mywallet-back.herokuapp.com/transactions", config);
 
     request
       .then((response) => {
@@ -42,7 +41,7 @@ export default function Homepage() {
   }, []);
 
   function logout() {
-    const request = axios.delete("http://localhost:4000/logout", config);
+    const request = axios.delete("https://mywallet-back.herokuapp.com/logout", config);
 
     request
       .then(() => {

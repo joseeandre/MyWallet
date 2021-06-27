@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Loading from "../Loading/Loading";
 import axios from "axios";
 
-export default function SignUp(props) {
+export default function SignUp() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -36,7 +36,7 @@ export default function SignUp(props) {
 
     setIsLoading(true);
 
-    const request = axios.post('http://localhost:4000/sign-up', {name, email, password});
+    const request = axios.post('https://mywallet-back.herokuapp.com/sign-up', {name, email, password});
 
     request.then(() => {
         setIsLoading(false);

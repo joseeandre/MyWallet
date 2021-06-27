@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Loading from "../Loading/Loading";
 import axios from 'axios';
 
@@ -30,7 +30,7 @@ export default function SignIn() {
 
     setIsLoading(true);
 
-    const request = axios.post("http://localhost:4000/sign-in", {
+    const request = axios.post("https://mywallet-back.herokuapp.com/sign-in", {
       email,
       password
     });
@@ -52,7 +52,7 @@ export default function SignIn() {
   return (
     <Content>
       <form onSubmit={submit}>
-        <img class="logo" src="./logos/MyWallet.svg" />
+        <img class="logo" src="./logos/MyWallet.svg" alt="logo"/>
         <input
           type="email"
           placeholder="email"

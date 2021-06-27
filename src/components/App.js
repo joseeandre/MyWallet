@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SignIn from "./Login/SignIn";
 import SignUp from "./Login/SignUp";
@@ -7,7 +7,6 @@ import AddTransaction from "./AddTransaction/AddTransaction";
 
 
 export default function App() {
-  const [user, setUser] = useState("");
   return (
     <BrowserRouter>
       <Switch>
